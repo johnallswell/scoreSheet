@@ -1,0 +1,138 @@
+<head>
+  <title>scoreSheet</title>
+</head>
+
+<body>
+
+  <h1 class="title text-center">Welcome to A100 Score Sheet</h1>
+<div class="sheet">
+  {{> scoreSheet}}
+  </div>
+  <div class="results">
+  	
+  	{{> results}}
+  </div>
+</body>
+
+<template name="scoreSheet">
+  <div class="container-fluid page">
+    <div class="row">
+		<div class="col-xs-4">
+		</div>    
+        <div class="col-xs-8">
+            <h1 class="text-center well">
+                Project Score Sheet
+            </h1>
+            
+            
+            <h3 class="text-left">
+                Directions: Use this template each week to score teams on their live or video presentations. If judging individual presentations, rate individuals on their organization (under group score) 
+
+            </h3>
+
+            <h4 class="text-left">
+              Scale Defined:</h4>
+              <p>0 - Complete failure on this metric (auto-zero for anyone who does not complete a demo)</p>
+              <p>1 - Poor quality; exhibits lack of effort or technical aptitude</p>
+              <p>2 - Average quality; work is of acceptable quality</p>
+              <p>3 - Good quality; work meets expectations</p>
+              <p>4 - Excellent quality; work exceeds expectations</p>
+            
+        </div>
+      </div>  
+   	<div class="row">    
+        <div class="col-xs-8 paper">
+            <table class="col-md-12 table-striped table-condensed cf">
+            <thead class="cf">
+              <tr>
+                <th class="col-md-4">Apprentice Name: {{getName}} {{> apprentice}}</th>
+                <th class="col-md-4"><input type="text" name="name"><button class="addName">Add Name</button></th>
+              </tr>
+              <tr>
+                <th>Individual Score:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Preparation</b> – is the Individual team member prepared for his or her section?</td>
+                <td>
+                  <select id="preparation" name="preparation" class="input-xlarge">
+                    <option>4 - Excellent quality</option>
+                    <option>3 - Good quality</option>
+                    <option>2 - Average quality</option>
+                    <option>1 - Poor quality</option>
+                    <option>0 - Complete failure</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><b>Clarity</b> – did the individual make correct use of technical terms, speak succinctly, and provide clear explanation of code?
+                </td>
+                <td>
+                  <select id="clarity" name="clarity" class="input-xlarge">
+                    <option>4 - Excellent quality</option>
+                    <option>3 - Good quality</option>
+                    <option>2 - Average quality</option>
+                    <option>1 - Poor quality</option>
+                    <option>0 - Complete failure</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><b>Delivery</b> – how was the individual's tone of voice, volume, eye contact, and clarity?</td>
+                <td>
+                  <select id="delivery" name="delivery" class="input-xlarge">
+                    <option>4 - Excellent quality</option>
+                    <option>3 - Good quality</option>
+                    <option>2 - Average quality</option>
+                    <option>1 - Poor quality</option>
+                    <option>0 - Complete failure</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+              <thead>
+                <tr rowspan="2">
+                  <th>Group Score:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Organization</b> – did the team overall do a good job of clearly organizing the presentation and maintaining a good flow?
+                  </td>
+                  <td>
+                    <select id="organization" name="organization" class="input-xlarge">
+                    <option>4 - Excellent quality</option>
+                    <option>3 - Good quality</option>
+                    <option>2 - Average quality</option>
+                    <option>1 - Poor quality</option>
+                    <option>0 - Complete failure</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <textarea id="notes" name="notes" maxlength="300" placeholder="Notes"></textarea>
+                  </td>
+                </tr>
+                <div class="row">
+        <button class="btn submitScore pull-right">Submit Form</button>
+    </div>
+              </tbody>
+          </table>
+        </div>
+       </div> 
+   
+    
+  </div>
+</template>
+<template name="apprentice">
+{{#with apprentice}}
+{{name}}
+{{/with}}
+</template>
+<template name="results">
+<div class="my-text text-center">
+<span class="getName">{{getName}}</span> is pretty amazing to do this well
+</div>
+</template>

@@ -1,0 +1,49 @@
+body{
+	background-color: #ebf4f3;
+}
+.page{
+	margin: 5em;
+}
+.paper{
+	box-shadow: 0 .1em 0 #FEC, .3em .4em 0 #888888;
+	background-color: #dedede;
+	margin: 4em 20em auto 5em;
+	padding: 2.5em 2.5em 2.5em 4em;
+	width: 72%;
+}
+.pic1 {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	background-image: url(../img/a100Logo.png);
+}
+.results{
+
+	margin-left: 5em;
+}
+p{
+	font-size: 1.7em;
+}
+.my-text{
+	padding: 5em;
+	font-size: 3em;
+}
+.getName{
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+.title{
+	color: #184f54;
+}
+#notes{
+	margin-top: 1em;
+	width: 50%;
+	height: 6em;
+}
+table{
+	font-size: 1.2em;
+
+}
+select {
+	font-size: 1.1em;
+}
